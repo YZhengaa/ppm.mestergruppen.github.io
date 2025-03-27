@@ -1,0 +1,899 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://pilarr.no/PilarrPPM#"
+     xml:base="http://pilarr.no/PilarrPPM"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:PilarrPPM="http://pilarr.no/PilarrPPM#/"
+     xmlns:Processes="https://w3id.org/digitalconstruction/0.5/Processes#">
+    <owl:Ontology rdf:about="http://pilarr.no/PilarrPPM#">
+        <owl:versionIRI rdf:resource="http://pilarr.no/PilarrPPM/0.1/"/>
+        <owl:imports rdf:resource="file:/Users/yuanzheng/Downloads/JBS_WPS%20copy.ttl"/>
+        <owl:imports rdf:resource="https://w3id.org/bot-0.3.2"/>
+        <owl:imports rdf:resource="https://w3id.org/digitalconstruction/0.5/Information"/>
+        <owl:imports rdf:resource="https://w3id.org/digitalconstruction/0.5/Materials"/>
+        <owl:imports rdf:resource="https://w3id.org/digitalconstruction/0.5/Processes"/>
+        <owl:imports rdf:resource="https://w3id.org/digitalconstruction/0.5/Variables"/>
+        <rdfs:comment>Copyright by Mester Gruppen AS</rdfs:comment>
+        <rdfs:comment>PilarrPPM is an application-level ontology focusing on:
+1.describing the organizational knowledge (Work package template) 
+2.providing a data schema for Pilarr semantic database (data lake) that represents and links different source of information (e.g. BIM quantity information) 
+3.represent multi-contextual information
+4.provide vocabulary for developing rules and queries for generating/retrieving the information for Job cards to support the LPS deployment in the housing model construction.</rdfs:comment>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.03</owl:versionInfo>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://pilarr.no/PilarrPPM#/containsJobCard -->
+
+
+    <owl:AnnotationProperty rdf:about="http://pilarr.no/PilarrPPM#/containsJobCard">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/digitalconstruction/0.5/Processes#hasSubActivity"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- https://w3id.org/digitalconstruction/0.5/Processes#hasSubActivity -->
+
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/digitalconstruction/0.5/Processes#hasSubActivity"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://pilarr.no/PilarrPPM#/contains -->
+
+
+    <owl:ObjectProperty rdf:about="http://pilarr.no/PilarrPPM#/contains">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://pilarr.no/PilarrPPM#/Zone"/>
+        <rdfs:range rdf:resource="http://pilarr.no/PilarrPPM#/Zone"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://pilarr.no/PilarrPPM#/hasCrew -->
+
+
+    <owl:ObjectProperty rdf:about="http://pilarr.no/PilarrPPM#/hasCrew">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/digitalconstruction/0.5/Agents#hasExecutingAgent"/>
+        <rdfs:domain rdf:resource="http://pilarr.no/PilarrPPM#/JobCard"/>
+        <rdfs:domain rdf:resource="http://pilarr.no/PilarrPPM#/WorkPackage"/>
+        <rdfs:range rdf:resource="http://pilarr.no/PilarrPPM#/Crew"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://pilarr.no/PilarrPPM#/hasDestinationLocation -->
+
+
+    <owl:ObjectProperty rdf:about="http://pilarr.no/PilarrPPM#/hasDestinationLocation">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/digitalconstruction/0.5/Processes#hasFinalLocation"/>
+        <rdfs:domain rdf:resource="http://pilarr.no/PilarrPPM#/LogisticsProcess"/>
+        <rdfs:range rdf:resource="http://pilarr.no/PilarrPPM#/Zone"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://pilarr.no/PilarrPPM#/hasElementQuantity -->
+
+
+    <owl:ObjectProperty rdf:about="http://pilarr.no/PilarrPPM#/hasElementQuantity">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/digitalconstruction/0.5/Variables#hasProperty"/>
+        <rdfs:domain rdf:resource="http://pilarr.no/PilarrPPM#/BuildingElement"/>
+        <rdfs:range rdf:resource="http://pilarr.no/PilarrPPM#/ElementQuantity"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://pilarr.no/PilarrPPM#/hasHouseModelSpecification -->
+
+
+    <owl:ObjectProperty rdf:about="http://pilarr.no/PilarrPPM#/hasHouseModelSpecification">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/digitalconstruction/0.5/Information#isTopicOf"/>
+        <rdfs:domain rdf:resource="http://pilarr.no/PilarrPPM#/Building"/>
+        <rdfs:range rdf:resource="http://pilarr.no/PilarrPPM#/HouseModel"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://pilarr.no/PilarrPPM#/hasJobCardSpecification -->
+
+
+    <owl:ObjectProperty rdf:about="http://pilarr.no/PilarrPPM#/hasJobCardSpecification">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/digitalconstruction/0.5/Information#isTopicOf"/>
+        <rdfs:domain rdf:resource="http://pilarr.no/PilarrPPM#/JobCard"/>
+        <rdfs:range rdf:resource="http://pilarr.no/PilarrPPM#/JobCardSpecification"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://pilarr.no/PilarrPPM#/hasMaterialQuantity -->
+
+
+    <owl:ObjectProperty rdf:about="http://pilarr.no/PilarrPPM#/hasMaterialQuantity">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/digitalconstruction/0.5/Variables#hasProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/digitalconstruction/0.5/Materials#MaterialBatch"/>
+        <rdfs:range rdf:resource="http://pilarr.no/PilarrPPM#/MaterialQuantity"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://pilarr.no/PilarrPPM#/hasMaterialSetSpecification -->
+
+
+    <owl:ObjectProperty rdf:about="http://pilarr.no/PilarrPPM#/hasMaterialSetSpecification">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/digitalconstruction/0.5/Information#isTopicOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/digitalconstruction/0.5/Materials#MaterialBatch"/>
+        <rdfs:range rdf:resource="http://pilarr.no/PilarrPPM#/MaterialSetSpecification"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://pilarr.no/PilarrPPM#/hasOriginLocation -->
+
+
+    <owl:ObjectProperty rdf:about="http://pilarr.no/PilarrPPM#/hasOriginLocation">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/digitalconstruction/0.5/Processes#hasInitialLocation"/>
+        <rdfs:domain rdf:resource="http://pilarr.no/PilarrPPM#/LogisticsProcess"/>
+        <rdfs:range rdf:resource="http://pilarr.no/PilarrPPM#/Zone"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://pilarr.no/PilarrPPM#/hasRelatedBuilding -->
+
+
+    <owl:ObjectProperty rdf:about="http://pilarr.no/PilarrPPM#/hasRelatedBuilding">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://pilarr.no/PilarrPPM#/JobCard"/>
+        <rdfs:domain rdf:resource="http://pilarr.no/PilarrPPM#/WorkPackage"/>
+        <rdfs:range rdf:resource="http://pilarr.no/PilarrPPM#/Building"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://pilarr.no/PilarrPPM#/hasRelatedBuildingElement -->
+
+
+    <owl:ObjectProperty rdf:about="http://pilarr.no/PilarrPPM#/hasRelatedBuildingElement">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://pilarr.no/PilarrPPM#/JobCard"/>
+        <rdfs:domain rdf:resource="http://pilarr.no/PilarrPPM#/WorkPackage"/>
+        <rdfs:range rdf:resource="http://pilarr.no/PilarrPPM#/BuildingElement"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://pilarr.no/PilarrPPM#/hasShippingMaterialBatch -->
+
+
+    <owl:ObjectProperty rdf:about="http://pilarr.no/PilarrPPM#/hasShippingMaterialBatch">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/digitalconstruction/0.5/Entities#hasMember"/>
+        <rdfs:domain rdf:resource="https://w3id.org/digitalconstruction/0.5/Processes#Shipment"/>
+        <rdfs:range rdf:resource="https://w3id.org/digitalconstruction/0.5/Materials#MaterialBatch"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://pilarr.no/PilarrPPM#/hasStoredMaterialBatch -->
+
+
+    <owl:ObjectProperty rdf:about="http://pilarr.no/PilarrPPM#/hasStoredMaterialBatch">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/digitalconstruction/0.5/Entities#hasMember"/>
+        <rdfs:domain rdf:resource="http://pilarr.no/PilarrPPM#/Inventory"/>
+        <rdfs:range rdf:resource="https://w3id.org/digitalconstruction/0.5/Materials#MaterialBatch"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://pilarr.no/PilarrPPM#/hasTrade -->
+
+
+    <owl:ObjectProperty rdf:about="http://pilarr.no/PilarrPPM#/hasTrade">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/digitalconstruction/0.5/Variables#hasProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://pilarr.no/PilarrPPM#/hasWorkPackageSpecification -->
+
+
+    <owl:ObjectProperty rdf:about="http://pilarr.no/PilarrPPM#/hasWorkPackageSpecification">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/digitalconstruction/0.5/Information#isTopicOf"/>
+        <rdfs:domain rdf:resource="http://pilarr.no/PilarrPPM#/WorkPackage"/>
+        <rdfs:range rdf:resource="http://pilarr.no/PilarrPPM#/WorkPackageSpecification"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://pilarr.no/PilarrPPM#/includesBuildingElementModel -->
+
+
+    <owl:ObjectProperty rdf:about="http://pilarr.no/PilarrPPM#/includesBuildingElementModel">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/digitalconstruction/0.5/Information#includesModel"/>
+        <rdfs:domain rdf:resource="http://pilarr.no/PilarrPPM#/HouseModel"/>
+        <rdfs:range rdf:resource="http://pilarr.no/PilarrPPM#/BuildingElementModel"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://pilarr.no/PilarrPPM#/includesJobCardSpecification -->
+
+
+    <owl:ObjectProperty rdf:about="http://pilarr.no/PilarrPPM#/includesJobCardSpecification">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/digitalconstruction/0.5/Information#includesModel"/>
+        <rdfs:domain rdf:resource="http://pilarr.no/PilarrPPM#/WorkPackageSpecification"/>
+        <rdfs:range rdf:resource="http://pilarr.no/PilarrPPM#/JobCardSpecification"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://pilarr.no/PilarrPPM#/includesMaterialListSpecification -->
+
+
+    <owl:ObjectProperty rdf:about="http://pilarr.no/PilarrPPM#/includesMaterialListSpecification">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/digitalconstruction/0.5/Information#includesModel"/>
+        <rdfs:domain rdf:resource="http://pilarr.no/PilarrPPM#/JobCardSpecification"/>
+        <rdfs:range rdf:resource="http://pilarr.no/PilarrPPM#/MaterialListSpecification"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://pilarr.no/PilarrPPM#/includesMaterialSetSpecification -->
+
+
+    <owl:ObjectProperty rdf:about="http://pilarr.no/PilarrPPM#/includesMaterialSetSpecification">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/digitalconstruction/0.5/Information#includesModel"/>
+        <rdfs:domain rdf:resource="http://pilarr.no/PilarrPPM#/MaterialListSpecification"/>
+        <rdfs:range rdf:resource="http://pilarr.no/PilarrPPM#/MaterialSetSpecification"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/digitalconstruction/0.5/Agents#hasExecutingAgent -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/digitalconstruction/0.5/Agents#hasExecutingAgent"/>
+    
+
+
+    <!-- https://w3id.org/digitalconstruction/0.5/Entities#hasMember -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/digitalconstruction/0.5/Entities#hasMember"/>
+    
+
+
+    <!-- https://w3id.org/digitalconstruction/0.5/Information#includesModel -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/digitalconstruction/0.5/Information#includesModel"/>
+    
+
+
+    <!-- https://w3id.org/digitalconstruction/0.5/Information#isTopicOf -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/digitalconstruction/0.5/Information#isTopicOf"/>
+    
+
+
+    <!-- https://w3id.org/digitalconstruction/0.5/Materials#hasMaterial -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/digitalconstruction/0.5/Materials#hasMaterial"/>
+    
+
+
+    <!-- https://w3id.org/digitalconstruction/0.5/Processes#hasFinalLocation -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/digitalconstruction/0.5/Processes#hasFinalLocation"/>
+    
+
+
+    <!-- https://w3id.org/digitalconstruction/0.5/Processes#hasInitialLocation -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/digitalconstruction/0.5/Processes#hasInitialLocation"/>
+    
+
+
+    <!-- https://w3id.org/digitalconstruction/0.5/Processes#hasObject -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/digitalconstruction/0.5/Processes#hasObject"/>
+    
+
+
+    <!-- https://w3id.org/digitalconstruction/0.5/Variables#hasProperty -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/digitalconstruction/0.5/Variables#hasProperty"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://pilarr.no/PilarrPPM#/ActualContext -->
+
+
+    <owl:Class rdf:about="http://pilarr.no/PilarrPPM#/ActualContext">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/digitalconstruction/0.5/Contexts#Context"/>
+        <owl:disjointWith rdf:resource="http://pilarr.no/PilarrPPM#/AsPlannedContext"/>
+        <owl:disjointWith rdf:resource="http://pilarr.no/PilarrPPM#/ReportedContext"/>
+        <owl:disjointWith rdf:resource="http://pilarr.no/PilarrPPM#/SpecificationContext"/>
+    </owl:Class>
+    
+
+
+    <!-- http://pilarr.no/PilarrPPM#/Apartment -->
+
+
+    <owl:Class rdf:about="http://pilarr.no/PilarrPPM#/Apartment">
+        <rdfs:subClassOf rdf:resource="http://pilarr.no/PilarrPPM#/Zone"/>
+        <owl:disjointWith rdf:resource="https://w3id.org/bot#Storey"/>
+    </owl:Class>
+    
+
+
+    <!-- http://pilarr.no/PilarrPPM#/AsPlannedContext -->
+
+
+    <owl:Class rdf:about="http://pilarr.no/PilarrPPM#/AsPlannedContext">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/digitalconstruction/0.5/Contexts#Context"/>
+        <owl:disjointWith rdf:resource="http://pilarr.no/PilarrPPM#/ReportedContext"/>
+        <owl:disjointWith rdf:resource="http://pilarr.no/PilarrPPM#/SpecificationContext"/>
+        <rdfs:comment>A realm of data that representing the as planned circumstances from schedule and plan.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://pilarr.no/PilarrPPM#/Building -->
+
+
+    <owl:Class rdf:about="http://pilarr.no/PilarrPPM#/Building">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/digitalconstruction/0.5/Entities#Building"/>
+    </owl:Class>
+    
+
+
+    <!-- http://pilarr.no/PilarrPPM#/BuildingElement -->
+
+
+    <owl:Class rdf:about="http://pilarr.no/PilarrPPM#/BuildingElement">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/digitalconstruction/0.5/Entities#BuildingObject"/>
+        <rdfs:comment xml:lang="en">A physical element that forms a part of an existing or designed building.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://pilarr.no/PilarrPPM#/BuildingElementModel -->
+
+
+    <owl:Class rdf:about="http://pilarr.no/PilarrPPM#/BuildingElementModel">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/digitalconstruction/0.5/Information#Catalog"/>
+        <owl:disjointWith rdf:resource="http://pilarr.no/PilarrPPM#/HouseModel"/>
+        <owl:disjointWith rdf:resource="http://pilarr.no/PilarrPPM#/JobCardSpecification"/>
+        <owl:disjointWith rdf:resource="http://pilarr.no/PilarrPPM#/MaterialListSpecification"/>
+        <owl:disjointWith rdf:resource="http://pilarr.no/PilarrPPM#/WorkPackageSpecification"/>
+        <rdfs:comment xml:lang="en">Pilarr Building Element Model is a catalog of a specific design of certain building element product type. It refers to a particular set of design features, configurations, and properties that each Building Element instance inherits from it.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://pilarr.no/PilarrPPM#/BuildingElementSpecificationEntry -->
+
+
+    <owl:Class rdf:about="http://pilarr.no/PilarrPPM#/BuildingElementSpecificationEntry">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/digitalconstruction/0.5/Information#CatalogEntry"/>
+    </owl:Class>
+    
+
+
+    <!-- http://pilarr.no/PilarrPPM#/Crew -->
+
+
+    <owl:Class rdf:about="http://pilarr.no/PilarrPPM#/Crew">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/digitalconstruction/0.5/Agents#Agent"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/digitalconstruction/0.5/Agents#Team"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/digitalconstruction/0.5/Variables#hasProperty"/>
+                <owl:someValuesFrom rdf:resource="http://pilarr.no/PilarrPPM#/CrewSize"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/digitalconstruction/0.5/Entities#hasMember"/>
+                <owl:allValuesFrom rdf:resource="http://pilarr.no/PilarrPPM#/Worker"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A set of workers working together for specific trades.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://pilarr.no/PilarrPPM#/CrewSize -->
+
+
+    <owl:Class rdf:about="http://pilarr.no/PilarrPPM#/CrewSize">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/digitalconstruction/0.5/Variables#QuantitativeProperty"/>
+    </owl:Class>
+    
+
+
+    <!-- http://pilarr.no/PilarrPPM#/ElementQuantity -->
+
+
+    <owl:Class rdf:about="http://pilarr.no/PilarrPPM#/ElementQuantity">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/digitalconstruction/0.5/Variables#QuantitativeProperty"/>
+    </owl:Class>
+    
+
+
+    <!-- http://pilarr.no/PilarrPPM#/HouseModel -->
+
+
+    <owl:Class rdf:about="http://pilarr.no/PilarrPPM#/HouseModel">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/digitalconstruction/0.5/Information#Catalog"/>
+        <owl:disjointWith rdf:resource="http://pilarr.no/PilarrPPM#/JobCardSpecification"/>
+        <owl:disjointWith rdf:resource="http://pilarr.no/PilarrPPM#/MaterialListSpecification"/>
+        <owl:disjointWith rdf:resource="http://pilarr.no/PilarrPPM#/WorkPackageSpecification"/>
+        <rdfs:comment xml:lang="en">Pilarr House Model is a standard representation of  a type building product (design), which is a catalog of Pilarr Building with same set of design features, configurations, and properties.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://pilarr.no/PilarrPPM#/HouseModelSpecificationEntry -->
+
+
+    <owl:Class rdf:about="http://pilarr.no/PilarrPPM#/HouseModelSpecificationEntry">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/digitalconstruction/0.5/Information#CatalogEntry"/>
+    </owl:Class>
+    
+
+
+    <!-- http://pilarr.no/PilarrPPM#/Inventory -->
+
+
+    <owl:Class rdf:about="http://pilarr.no/PilarrPPM#/Inventory">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/digitalconstruction/0.5/Entities#Group"/>
+        <rdfs:comment>Refers to the stock of construction  materials</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://pilarr.no/PilarrPPM#/JobCard -->
+
+
+    <owl:Class rdf:about="http://pilarr.no/PilarrPPM#/JobCard">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/digitalconstruction/0.5/Processes#Activity"/>
+        <rdfs:comment xml:lang="en">A job card is a subset work of a work package that can be completed by a specific trade within a designated physical zone on the construction site. The maximum duration for the job card is one day. </rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://pilarr.no/PilarrPPM#/JobCardSpecification -->
+
+
+    <owl:Class rdf:about="http://pilarr.no/PilarrPPM#/JobCardSpecification">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/digitalconstruction/0.5/Information#Catalog"/>
+        <owl:disjointWith rdf:resource="http://pilarr.no/PilarrPPM#/MaterialListSpecification"/>
+        <owl:disjointWith rdf:resource="http://pilarr.no/PilarrPPM#/WorkPackageSpecification"/>
+        <rdfs:comment>A template job card contains the default knowledge and information to set a specific job card, including material list, corresponding building element model, default work rate</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://pilarr.no/PilarrPPM#/JobCardSpecificationEntry -->
+
+
+    <owl:Class rdf:about="http://pilarr.no/PilarrPPM#/JobCardSpecificationEntry">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/digitalconstruction/0.5/Information#CatalogEntry"/>
+    </owl:Class>
+    
+
+
+    <!-- http://pilarr.no/PilarrPPM#/LogisticsProcess -->
+
+
+    <owl:Class rdf:about="http://pilarr.no/PilarrPPM#/LogisticsProcess">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/digitalconstruction/0.5/Processes#Activity"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/digitalconstruction/0.5/Processes#hasObject"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/digitalconstruction/0.5/Processes#Shipment"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Refers to the process of transporting goods or materials from one location to another.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://pilarr.no/PilarrPPM#/MaterialListSpecification -->
+
+
+    <owl:Class rdf:about="http://pilarr.no/PilarrPPM#/MaterialListSpecification">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/digitalconstruction/0.5/Information#Catalog"/>
+        <owl:disjointWith rdf:resource="http://pilarr.no/PilarrPPM#/WorkPackageSpecification"/>
+        <rdfs:comment>A template material list is a catalog of required material for corresponding template job card, which contains the default information of consitituted TemplateMaterialSet</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://pilarr.no/PilarrPPM#/MaterialListSpecificationEntry -->
+
+
+    <owl:Class rdf:about="http://pilarr.no/PilarrPPM#/MaterialListSpecificationEntry">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/digitalconstruction/0.5/Information#CatalogEntry"/>
+    </owl:Class>
+    
+
+
+    <!-- http://pilarr.no/PilarrPPM#/MaterialQuantity -->
+
+
+    <owl:Class rdf:about="http://pilarr.no/PilarrPPM#/MaterialQuantity">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/digitalconstruction/0.5/Variables#QuantitativeProperty"/>
+    </owl:Class>
+    
+
+
+    <!-- http://pilarr.no/PilarrPPM#/MaterialSetSpecification -->
+
+
+    <owl:Class rdf:about="http://pilarr.no/PilarrPPM#/MaterialSetSpecification">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/digitalconstruction/0.5/Information#Catalog"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/digitalconstruction/0.5/Materials#hasMaterial"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/digitalconstruction/0.5/Materials#Material"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>A template material set is a catalog to describe the material requirement contents, including material type and quantity.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://pilarr.no/PilarrPPM#/MaterialSetSpecificationEntry -->
+
+
+    <owl:Class rdf:about="http://pilarr.no/PilarrPPM#/MaterialSetSpecificationEntry">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/digitalconstruction/0.5/Information#CatalogEntry"/>
+    </owl:Class>
+    
+
+
+    <!-- http://pilarr.no/PilarrPPM#/ProductionRate -->
+
+
+    <owl:Class rdf:about="http://pilarr.no/PilarrPPM#/ProductionRate">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/digitalconstruction/0.5/Processes#ProductionRate"/>
+    </owl:Class>
+    
+
+
+    <!-- http://pilarr.no/PilarrPPM#/QuantityOfWork -->
+
+
+    <owl:Class rdf:about="http://pilarr.no/PilarrPPM#/QuantityOfWork">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/digitalconstruction/0.5/Variables#QuantitativeProperty"/>
+    </owl:Class>
+    
+
+
+    <!-- http://pilarr.no/PilarrPPM#/ReportedContext -->
+
+
+    <owl:Class rdf:about="http://pilarr.no/PilarrPPM#/ReportedContext">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/digitalconstruction/0.5/Contexts#Context"/>
+        <owl:disjointWith rdf:resource="http://pilarr.no/PilarrPPM#/SpecificationContext"/>
+        <rdfs:comment>A realm of data that representing the reported information of construction execution.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://pilarr.no/PilarrPPM#/Schedule -->
+
+
+    <owl:Class rdf:about="http://pilarr.no/PilarrPPM#/Schedule">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/digitalconstruction/0.5/Information#Plan"/>
+        <rdfs:comment>A schedule is a detailed plan that outlines the timeline, sequence, and duration of activities required to complete a construction project.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://pilarr.no/PilarrPPM#/SpatialPositionState -->
+
+
+    <owl:Class rdf:about="http://pilarr.no/PilarrPPM#/SpatialPositionState">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/digitalconstruction/0.5/Variables#PropertyState"/>
+    </owl:Class>
+    
+
+
+    <!-- http://pilarr.no/PilarrPPM#/SpecificationContext -->
+
+
+    <owl:Class rdf:about="http://pilarr.no/PilarrPPM#/SpecificationContext">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/digitalconstruction/0.5/Contexts#Context"/>
+        <rdfs:comment>A realm of data that representing the default and empirical information and domain knowledge. For example the properties in TWP, TJC, HM, such as the production rate of different job card.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://pilarr.no/PilarrPPM#/Trade -->
+
+
+    <owl:Class rdf:about="http://pilarr.no/PilarrPPM#/Trade">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/digitalconstruction/0.5/Entities#Category"/>
+        <rdfs:comment>Refers to a specialized occupation or craft that is involved in the construction process. Each trade focuses on a specific area of expertise.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://pilarr.no/PilarrPPM#/WorkPackage -->
+
+
+    <owl:Class rdf:about="http://pilarr.no/PilarrPPM#/WorkPackage">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/digitalconstruction/0.5/Processes#Activity"/>
+        <rdfs:comment xml:lang="en">A work package is a clearly defined scope of work that can be completed by a specific trade within a designated physical zone on the construction site. The maximum duration for the work package is one week. </rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://pilarr.no/PilarrPPM#/WorkPackageSpecification -->
+
+
+    <owl:Class rdf:about="http://pilarr.no/PilarrPPM#/WorkPackageSpecification">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/digitalconstruction/0.5/Information#Catalog"/>
+        <rdfs:comment>A template work package is a catalog contains information and knowledge for setting WPs.  A template work package contains a set of template job card with detailed settings</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://pilarr.no/PilarrPPM#/WorkPackageSpecificationEntry -->
+
+
+    <owl:Class rdf:about="http://pilarr.no/PilarrPPM#/WorkPackageSpecificationEntry">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/digitalconstruction/0.5/Information#CatalogEntry"/>
+    </owl:Class>
+    
+
+
+    <!-- http://pilarr.no/PilarrPPM#/Worker -->
+
+
+    <owl:Class rdf:about="http://pilarr.no/PilarrPPM#/Worker">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/digitalconstruction/0.5/Agents#Person"/>
+        <rdfs:comment>A specific person to affiliate to  a crew  to execute the construction process</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://pilarr.no/PilarrPPM#/Zone -->
+
+
+    <owl:Class rdf:about="http://pilarr.no/PilarrPPM#/Zone">
+        <owl:equivalentClass rdf:resource="https://w3id.org/digitalconstruction/0.5/Entities#Location"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/digitalconstruction/0.5/Entities#Location"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/bot#Storey -->
+
+
+    <owl:Class rdf:about="https://w3id.org/bot#Storey">
+        <rdfs:subClassOf rdf:resource="http://pilarr.no/PilarrPPM#/Zone"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/bot#Zone -->
+
+
+    <owl:Class rdf:about="https://w3id.org/bot#Zone">
+        <owl:equivalentClass rdf:resource="https://w3id.org/digitalconstruction/0.5/Entities#Location"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/digitalconstruction/0.5/Agents#Agent -->
+
+
+    <owl:Class rdf:about="https://w3id.org/digitalconstruction/0.5/Agents#Agent"/>
+    
+
+
+    <!-- https://w3id.org/digitalconstruction/0.5/Agents#Person -->
+
+
+    <owl:Class rdf:about="https://w3id.org/digitalconstruction/0.5/Agents#Person"/>
+    
+
+
+    <!-- https://w3id.org/digitalconstruction/0.5/Agents#Team -->
+
+
+    <owl:Class rdf:about="https://w3id.org/digitalconstruction/0.5/Agents#Team"/>
+    
+
+
+    <!-- https://w3id.org/digitalconstruction/0.5/Contexts#Context -->
+
+
+    <owl:Class rdf:about="https://w3id.org/digitalconstruction/0.5/Contexts#Context"/>
+    
+
+
+    <!-- https://w3id.org/digitalconstruction/0.5/Entities#Building -->
+
+
+    <owl:Class rdf:about="https://w3id.org/digitalconstruction/0.5/Entities#Building"/>
+    
+
+
+    <!-- https://w3id.org/digitalconstruction/0.5/Entities#BuildingObject -->
+
+
+    <owl:Class rdf:about="https://w3id.org/digitalconstruction/0.5/Entities#BuildingObject"/>
+    
+
+
+    <!-- https://w3id.org/digitalconstruction/0.5/Entities#Category -->
+
+
+    <owl:Class rdf:about="https://w3id.org/digitalconstruction/0.5/Entities#Category"/>
+    
+
+
+    <!-- https://w3id.org/digitalconstruction/0.5/Entities#Group -->
+
+
+    <owl:Class rdf:about="https://w3id.org/digitalconstruction/0.5/Entities#Group"/>
+    
+
+
+    <!-- https://w3id.org/digitalconstruction/0.5/Entities#Location -->
+
+
+    <owl:Class rdf:about="https://w3id.org/digitalconstruction/0.5/Entities#Location"/>
+    
+
+
+    <!-- https://w3id.org/digitalconstruction/0.5/Information#Catalog -->
+
+
+    <owl:Class rdf:about="https://w3id.org/digitalconstruction/0.5/Information#Catalog"/>
+    
+
+
+    <!-- https://w3id.org/digitalconstruction/0.5/Information#CatalogEntry -->
+
+
+    <owl:Class rdf:about="https://w3id.org/digitalconstruction/0.5/Information#CatalogEntry"/>
+    
+
+
+    <!-- https://w3id.org/digitalconstruction/0.5/Information#Plan -->
+
+
+    <owl:Class rdf:about="https://w3id.org/digitalconstruction/0.5/Information#Plan"/>
+    
+
+
+    <!-- https://w3id.org/digitalconstruction/0.5/Materials#Material -->
+
+
+    <owl:Class rdf:about="https://w3id.org/digitalconstruction/0.5/Materials#Material"/>
+    
+
+
+    <!-- https://w3id.org/digitalconstruction/0.5/Materials#MaterialBatch -->
+
+
+    <owl:Class rdf:about="https://w3id.org/digitalconstruction/0.5/Materials#MaterialBatch"/>
+    
+
+
+    <!-- https://w3id.org/digitalconstruction/0.5/Processes#Activity -->
+
+
+    <owl:Class rdf:about="https://w3id.org/digitalconstruction/0.5/Processes#Activity"/>
+    
+
+
+    <!-- https://w3id.org/digitalconstruction/0.5/Processes#ProductionRate -->
+
+
+    <owl:Class rdf:about="https://w3id.org/digitalconstruction/0.5/Processes#ProductionRate"/>
+    
+
+
+    <!-- https://w3id.org/digitalconstruction/0.5/Processes#Shipment -->
+
+
+    <owl:Class rdf:about="https://w3id.org/digitalconstruction/0.5/Processes#Shipment"/>
+    
+
+
+    <!-- https://w3id.org/digitalconstruction/0.5/Variables#PropertyState -->
+
+
+    <owl:Class rdf:about="https://w3id.org/digitalconstruction/0.5/Variables#PropertyState"/>
+    
+
+
+    <!-- https://w3id.org/digitalconstruction/0.5/Variables#QuantitativeProperty -->
+
+
+    <owl:Class rdf:about="https://w3id.org/digitalconstruction/0.5/Variables#QuantitativeProperty"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://pilarr.no/PilarrPPM#/BuildingElementSpecificationEntry"/>
+            <rdf:Description rdf:about="http://pilarr.no/PilarrPPM#/HouseModelSpecificationEntry"/>
+            <rdf:Description rdf:about="http://pilarr.no/PilarrPPM#/JobCardSpecificationEntry"/>
+            <rdf:Description rdf:about="http://pilarr.no/PilarrPPM#/MaterialListSpecificationEntry"/>
+            <rdf:Description rdf:about="http://pilarr.no/PilarrPPM#/MaterialSetSpecificationEntry"/>
+            <rdf:Description rdf:about="http://pilarr.no/PilarrPPM#/WorkPackageSpecificationEntry"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/ -->
+
+

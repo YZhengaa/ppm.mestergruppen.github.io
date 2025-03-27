@@ -1,0 +1,472 @@
+<http://pilarr.no/PilarrPPM#> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://pilarr.no/PilarrPPM#> <http://www.w3.org/2002/07/owl#versionIRI> <http://pilarr.no/PilarrPPM/0.1/> .
+<http://pilarr.no/PilarrPPM#> <http://www.w3.org/2002/07/owl#imports> <file:/Users/yuanzheng/Downloads/JBS_WPS%20copy.ttl> .
+<http://pilarr.no/PilarrPPM#> <http://www.w3.org/2002/07/owl#imports> <https://w3id.org/bot-0.3.2> .
+<http://pilarr.no/PilarrPPM#> <http://www.w3.org/2002/07/owl#imports> <https://w3id.org/digitalconstruction/0.5/Information> .
+<http://pilarr.no/PilarrPPM#> <http://www.w3.org/2002/07/owl#imports> <https://w3id.org/digitalconstruction/0.5/Materials> .
+<http://pilarr.no/PilarrPPM#> <http://www.w3.org/2002/07/owl#imports> <https://w3id.org/digitalconstruction/0.5/Processes> .
+<http://pilarr.no/PilarrPPM#> <http://www.w3.org/2002/07/owl#imports> <https://w3id.org/digitalconstruction/0.5/Variables> .
+<http://pilarr.no/PilarrPPM#> <http://www.w3.org/2000/01/rdf-schema#comment> "Copyright by Mester Gruppen AS" .
+<http://pilarr.no/PilarrPPM#> <http://www.w3.org/2000/01/rdf-schema#comment> "PilarrPPM is an application-level ontology focusing on:\n1.describing the organizational knowledge (Work package template) \n2.providing a data schema for Pilarr semantic database (data lake) that represents and links different source of information (e.g. BIM quantity information) \n3.represent multi-contextual information\n4.provide vocabulary for developing rules and queries for generating/retrieving the information for Job cards to support the LPS deployment in the housing model construction." .
+<http://pilarr.no/PilarrPPM#> <http://www.w3.org/2002/07/owl#versionInfo> "0.03"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://pilarr.no/PilarrPPM#/containsJobCard
+<http://pilarr.no/PilarrPPM#/containsJobCard> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://pilarr.no/PilarrPPM#/containsJobCard> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/digitalconstruction/0.5/Processes#hasSubActivity> .
+<https://w3id.org/digitalconstruction/0.5/Processes#hasSubActivity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://w3id.org/digitalconstruction/0.5/Processes#hasSubActivity
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# http://pilarr.no/PilarrPPM#/contains
+<http://pilarr.no/PilarrPPM#/contains> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://pilarr.no/PilarrPPM#/contains> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<http://pilarr.no/PilarrPPM#/contains> <http://www.w3.org/2000/01/rdf-schema#domain> <http://pilarr.no/PilarrPPM#/Zone> .
+<http://pilarr.no/PilarrPPM#/contains> <http://www.w3.org/2000/01/rdf-schema#range> <http://pilarr.no/PilarrPPM#/Zone> .
+# 
+# http://pilarr.no/PilarrPPM#/hasCrew
+<http://pilarr.no/PilarrPPM#/hasCrew> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://pilarr.no/PilarrPPM#/hasCrew> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/digitalconstruction/0.5/Agents#hasExecutingAgent> .
+<https://w3id.org/digitalconstruction/0.5/Agents#hasExecutingAgent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://pilarr.no/PilarrPPM#/hasCrew> <http://www.w3.org/2000/01/rdf-schema#domain> <http://pilarr.no/PilarrPPM#/JobCard> .
+<http://pilarr.no/PilarrPPM#/hasCrew> <http://www.w3.org/2000/01/rdf-schema#domain> <http://pilarr.no/PilarrPPM#/WorkPackage> .
+<http://pilarr.no/PilarrPPM#/hasCrew> <http://www.w3.org/2000/01/rdf-schema#range> <http://pilarr.no/PilarrPPM#/Crew> .
+# 
+# http://pilarr.no/PilarrPPM#/hasDestinationLocation
+<http://pilarr.no/PilarrPPM#/hasDestinationLocation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://pilarr.no/PilarrPPM#/hasDestinationLocation> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/digitalconstruction/0.5/Processes#hasFinalLocation> .
+<https://w3id.org/digitalconstruction/0.5/Processes#hasFinalLocation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://pilarr.no/PilarrPPM#/hasDestinationLocation> <http://www.w3.org/2000/01/rdf-schema#domain> <http://pilarr.no/PilarrPPM#/LogisticsProcess> .
+<http://pilarr.no/PilarrPPM#/hasDestinationLocation> <http://www.w3.org/2000/01/rdf-schema#range> <http://pilarr.no/PilarrPPM#/Zone> .
+# 
+# http://pilarr.no/PilarrPPM#/hasElementQuantity
+<http://pilarr.no/PilarrPPM#/hasElementQuantity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://pilarr.no/PilarrPPM#/hasElementQuantity> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/digitalconstruction/0.5/Variables#hasProperty> .
+<https://w3id.org/digitalconstruction/0.5/Variables#hasProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://pilarr.no/PilarrPPM#/hasElementQuantity> <http://www.w3.org/2000/01/rdf-schema#domain> <http://pilarr.no/PilarrPPM#/BuildingElement> .
+<http://pilarr.no/PilarrPPM#/hasElementQuantity> <http://www.w3.org/2000/01/rdf-schema#range> <http://pilarr.no/PilarrPPM#/ElementQuantity> .
+# 
+# http://pilarr.no/PilarrPPM#/hasHouseModelSpecification
+<http://pilarr.no/PilarrPPM#/hasHouseModelSpecification> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://pilarr.no/PilarrPPM#/hasHouseModelSpecification> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/digitalconstruction/0.5/Information#isTopicOf> .
+<https://w3id.org/digitalconstruction/0.5/Information#isTopicOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://pilarr.no/PilarrPPM#/hasHouseModelSpecification> <http://www.w3.org/2000/01/rdf-schema#domain> <http://pilarr.no/PilarrPPM#/Building> .
+<http://pilarr.no/PilarrPPM#/hasHouseModelSpecification> <http://www.w3.org/2000/01/rdf-schema#range> <http://pilarr.no/PilarrPPM#/HouseModel> .
+# 
+# http://pilarr.no/PilarrPPM#/hasJobCardSpecification
+<http://pilarr.no/PilarrPPM#/hasJobCardSpecification> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://pilarr.no/PilarrPPM#/hasJobCardSpecification> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/digitalconstruction/0.5/Information#isTopicOf> .
+<http://pilarr.no/PilarrPPM#/hasJobCardSpecification> <http://www.w3.org/2000/01/rdf-schema#domain> <http://pilarr.no/PilarrPPM#/JobCard> .
+<http://pilarr.no/PilarrPPM#/hasJobCardSpecification> <http://www.w3.org/2000/01/rdf-schema#range> <http://pilarr.no/PilarrPPM#/JobCardSpecification> .
+# 
+# http://pilarr.no/PilarrPPM#/hasMaterialQuantity
+<http://pilarr.no/PilarrPPM#/hasMaterialQuantity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://pilarr.no/PilarrPPM#/hasMaterialQuantity> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/digitalconstruction/0.5/Variables#hasProperty> .
+<http://pilarr.no/PilarrPPM#/hasMaterialQuantity> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/digitalconstruction/0.5/Materials#MaterialBatch> .
+<https://w3id.org/digitalconstruction/0.5/Materials#MaterialBatch> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://pilarr.no/PilarrPPM#/hasMaterialQuantity> <http://www.w3.org/2000/01/rdf-schema#range> <http://pilarr.no/PilarrPPM#/MaterialQuantity> .
+# 
+# http://pilarr.no/PilarrPPM#/hasMaterialSetSpecification
+<http://pilarr.no/PilarrPPM#/hasMaterialSetSpecification> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://pilarr.no/PilarrPPM#/hasMaterialSetSpecification> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/digitalconstruction/0.5/Information#isTopicOf> .
+<http://pilarr.no/PilarrPPM#/hasMaterialSetSpecification> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/digitalconstruction/0.5/Materials#MaterialBatch> .
+<http://pilarr.no/PilarrPPM#/hasMaterialSetSpecification> <http://www.w3.org/2000/01/rdf-schema#range> <http://pilarr.no/PilarrPPM#/MaterialSetSpecification> .
+# 
+# http://pilarr.no/PilarrPPM#/hasOriginLocation
+<http://pilarr.no/PilarrPPM#/hasOriginLocation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://pilarr.no/PilarrPPM#/hasOriginLocation> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/digitalconstruction/0.5/Processes#hasInitialLocation> .
+<https://w3id.org/digitalconstruction/0.5/Processes#hasInitialLocation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://pilarr.no/PilarrPPM#/hasOriginLocation> <http://www.w3.org/2000/01/rdf-schema#domain> <http://pilarr.no/PilarrPPM#/LogisticsProcess> .
+<http://pilarr.no/PilarrPPM#/hasOriginLocation> <http://www.w3.org/2000/01/rdf-schema#range> <http://pilarr.no/PilarrPPM#/Zone> .
+# 
+# http://pilarr.no/PilarrPPM#/hasRelatedBuilding
+<http://pilarr.no/PilarrPPM#/hasRelatedBuilding> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://pilarr.no/PilarrPPM#/hasRelatedBuilding> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<http://pilarr.no/PilarrPPM#/hasRelatedBuilding> <http://www.w3.org/2000/01/rdf-schema#domain> <http://pilarr.no/PilarrPPM#/JobCard> .
+<http://pilarr.no/PilarrPPM#/hasRelatedBuilding> <http://www.w3.org/2000/01/rdf-schema#domain> <http://pilarr.no/PilarrPPM#/WorkPackage> .
+<http://pilarr.no/PilarrPPM#/hasRelatedBuilding> <http://www.w3.org/2000/01/rdf-schema#range> <http://pilarr.no/PilarrPPM#/Building> .
+# 
+# http://pilarr.no/PilarrPPM#/hasRelatedBuildingElement
+<http://pilarr.no/PilarrPPM#/hasRelatedBuildingElement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://pilarr.no/PilarrPPM#/hasRelatedBuildingElement> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<http://pilarr.no/PilarrPPM#/hasRelatedBuildingElement> <http://www.w3.org/2000/01/rdf-schema#domain> <http://pilarr.no/PilarrPPM#/JobCard> .
+<http://pilarr.no/PilarrPPM#/hasRelatedBuildingElement> <http://www.w3.org/2000/01/rdf-schema#domain> <http://pilarr.no/PilarrPPM#/WorkPackage> .
+<http://pilarr.no/PilarrPPM#/hasRelatedBuildingElement> <http://www.w3.org/2000/01/rdf-schema#range> <http://pilarr.no/PilarrPPM#/BuildingElement> .
+# 
+# http://pilarr.no/PilarrPPM#/hasShippingMaterialBatch
+<http://pilarr.no/PilarrPPM#/hasShippingMaterialBatch> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://pilarr.no/PilarrPPM#/hasShippingMaterialBatch> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/digitalconstruction/0.5/Entities#hasMember> .
+<https://w3id.org/digitalconstruction/0.5/Entities#hasMember> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://pilarr.no/PilarrPPM#/hasShippingMaterialBatch> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/digitalconstruction/0.5/Processes#Shipment> .
+<https://w3id.org/digitalconstruction/0.5/Processes#Shipment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://pilarr.no/PilarrPPM#/hasShippingMaterialBatch> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/digitalconstruction/0.5/Materials#MaterialBatch> .
+# 
+# http://pilarr.no/PilarrPPM#/hasStoredMaterialBatch
+<http://pilarr.no/PilarrPPM#/hasStoredMaterialBatch> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://pilarr.no/PilarrPPM#/hasStoredMaterialBatch> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/digitalconstruction/0.5/Entities#hasMember> .
+<http://pilarr.no/PilarrPPM#/hasStoredMaterialBatch> <http://www.w3.org/2000/01/rdf-schema#domain> <http://pilarr.no/PilarrPPM#/Inventory> .
+<http://pilarr.no/PilarrPPM#/hasStoredMaterialBatch> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/digitalconstruction/0.5/Materials#MaterialBatch> .
+# 
+# http://pilarr.no/PilarrPPM#/hasTrade
+<http://pilarr.no/PilarrPPM#/hasTrade> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://pilarr.no/PilarrPPM#/hasTrade> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/digitalconstruction/0.5/Variables#hasProperty> .
+# 
+# http://pilarr.no/PilarrPPM#/hasWorkPackageSpecification
+<http://pilarr.no/PilarrPPM#/hasWorkPackageSpecification> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://pilarr.no/PilarrPPM#/hasWorkPackageSpecification> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/digitalconstruction/0.5/Information#isTopicOf> .
+<http://pilarr.no/PilarrPPM#/hasWorkPackageSpecification> <http://www.w3.org/2000/01/rdf-schema#domain> <http://pilarr.no/PilarrPPM#/WorkPackage> .
+<http://pilarr.no/PilarrPPM#/hasWorkPackageSpecification> <http://www.w3.org/2000/01/rdf-schema#range> <http://pilarr.no/PilarrPPM#/WorkPackageSpecification> .
+# 
+# http://pilarr.no/PilarrPPM#/includesBuildingElementModel
+<http://pilarr.no/PilarrPPM#/includesBuildingElementModel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://pilarr.no/PilarrPPM#/includesBuildingElementModel> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/digitalconstruction/0.5/Information#includesModel> .
+<https://w3id.org/digitalconstruction/0.5/Information#includesModel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://pilarr.no/PilarrPPM#/includesBuildingElementModel> <http://www.w3.org/2000/01/rdf-schema#domain> <http://pilarr.no/PilarrPPM#/HouseModel> .
+<http://pilarr.no/PilarrPPM#/includesBuildingElementModel> <http://www.w3.org/2000/01/rdf-schema#range> <http://pilarr.no/PilarrPPM#/BuildingElementModel> .
+# 
+# http://pilarr.no/PilarrPPM#/includesJobCardSpecification
+<http://pilarr.no/PilarrPPM#/includesJobCardSpecification> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://pilarr.no/PilarrPPM#/includesJobCardSpecification> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/digitalconstruction/0.5/Information#includesModel> .
+<http://pilarr.no/PilarrPPM#/includesJobCardSpecification> <http://www.w3.org/2000/01/rdf-schema#domain> <http://pilarr.no/PilarrPPM#/WorkPackageSpecification> .
+<http://pilarr.no/PilarrPPM#/includesJobCardSpecification> <http://www.w3.org/2000/01/rdf-schema#range> <http://pilarr.no/PilarrPPM#/JobCardSpecification> .
+# 
+# http://pilarr.no/PilarrPPM#/includesMaterialListSpecification
+<http://pilarr.no/PilarrPPM#/includesMaterialListSpecification> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://pilarr.no/PilarrPPM#/includesMaterialListSpecification> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/digitalconstruction/0.5/Information#includesModel> .
+<http://pilarr.no/PilarrPPM#/includesMaterialListSpecification> <http://www.w3.org/2000/01/rdf-schema#domain> <http://pilarr.no/PilarrPPM#/JobCardSpecification> .
+<http://pilarr.no/PilarrPPM#/includesMaterialListSpecification> <http://www.w3.org/2000/01/rdf-schema#range> <http://pilarr.no/PilarrPPM#/MaterialListSpecification> .
+# 
+# http://pilarr.no/PilarrPPM#/includesMaterialSetSpecification
+<http://pilarr.no/PilarrPPM#/includesMaterialSetSpecification> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://pilarr.no/PilarrPPM#/includesMaterialSetSpecification> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/digitalconstruction/0.5/Information#includesModel> .
+<http://pilarr.no/PilarrPPM#/includesMaterialSetSpecification> <http://www.w3.org/2000/01/rdf-schema#domain> <http://pilarr.no/PilarrPPM#/MaterialListSpecification> .
+<http://pilarr.no/PilarrPPM#/includesMaterialSetSpecification> <http://www.w3.org/2000/01/rdf-schema#range> <http://pilarr.no/PilarrPPM#/MaterialSetSpecification> .
+# 
+# https://w3id.org/digitalconstruction/0.5/Agents#hasExecutingAgent
+# 
+# https://w3id.org/digitalconstruction/0.5/Entities#hasMember
+# 
+# https://w3id.org/digitalconstruction/0.5/Information#includesModel
+# 
+# https://w3id.org/digitalconstruction/0.5/Information#isTopicOf
+# 
+# https://w3id.org/digitalconstruction/0.5/Materials#hasMaterial
+<https://w3id.org/digitalconstruction/0.5/Materials#hasMaterial> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# https://w3id.org/digitalconstruction/0.5/Processes#hasFinalLocation
+# 
+# https://w3id.org/digitalconstruction/0.5/Processes#hasInitialLocation
+# 
+# https://w3id.org/digitalconstruction/0.5/Processes#hasObject
+<https://w3id.org/digitalconstruction/0.5/Processes#hasObject> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# https://w3id.org/digitalconstruction/0.5/Variables#hasProperty
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://pilarr.no/PilarrPPM#/ActualContext
+<http://pilarr.no/PilarrPPM#/ActualContext> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://pilarr.no/PilarrPPM#/ActualContext> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/digitalconstruction/0.5/Contexts#Context> .
+<https://w3id.org/digitalconstruction/0.5/Contexts#Context> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://pilarr.no/PilarrPPM#/ActualContext> <http://www.w3.org/2002/07/owl#disjointWith> <http://pilarr.no/PilarrPPM#/AsPlannedContext> .
+<http://pilarr.no/PilarrPPM#/ActualContext> <http://www.w3.org/2002/07/owl#disjointWith> <http://pilarr.no/PilarrPPM#/ReportedContext> .
+<http://pilarr.no/PilarrPPM#/ActualContext> <http://www.w3.org/2002/07/owl#disjointWith> <http://pilarr.no/PilarrPPM#/SpecificationContext> .
+# 
+# http://pilarr.no/PilarrPPM#/Apartment
+<http://pilarr.no/PilarrPPM#/Apartment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://pilarr.no/PilarrPPM#/Apartment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://pilarr.no/PilarrPPM#/Zone> .
+<http://pilarr.no/PilarrPPM#/Apartment> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/bot#Storey> .
+<https://w3id.org/bot#Storey> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://pilarr.no/PilarrPPM#/AsPlannedContext
+<http://pilarr.no/PilarrPPM#/AsPlannedContext> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://pilarr.no/PilarrPPM#/AsPlannedContext> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/digitalconstruction/0.5/Contexts#Context> .
+<http://pilarr.no/PilarrPPM#/AsPlannedContext> <http://www.w3.org/2002/07/owl#disjointWith> <http://pilarr.no/PilarrPPM#/ReportedContext> .
+<http://pilarr.no/PilarrPPM#/AsPlannedContext> <http://www.w3.org/2002/07/owl#disjointWith> <http://pilarr.no/PilarrPPM#/SpecificationContext> .
+<http://pilarr.no/PilarrPPM#/AsPlannedContext> <http://www.w3.org/2000/01/rdf-schema#comment> "A realm of data that representing the as planned circumstances from schedule and plan." .
+# 
+# http://pilarr.no/PilarrPPM#/Building
+<http://pilarr.no/PilarrPPM#/Building> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://pilarr.no/PilarrPPM#/Building> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/digitalconstruction/0.5/Entities#Building> .
+<https://w3id.org/digitalconstruction/0.5/Entities#Building> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://pilarr.no/PilarrPPM#/BuildingElement
+<http://pilarr.no/PilarrPPM#/BuildingElement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://pilarr.no/PilarrPPM#/BuildingElement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/digitalconstruction/0.5/Entities#BuildingObject> .
+<https://w3id.org/digitalconstruction/0.5/Entities#BuildingObject> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://pilarr.no/PilarrPPM#/BuildingElement> <http://www.w3.org/2000/01/rdf-schema#comment> "A physical element that forms a part of an existing or designed building."@en .
+# 
+# http://pilarr.no/PilarrPPM#/BuildingElementModel
+<http://pilarr.no/PilarrPPM#/BuildingElementModel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://pilarr.no/PilarrPPM#/BuildingElementModel> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/digitalconstruction/0.5/Information#Catalog> .
+<https://w3id.org/digitalconstruction/0.5/Information#Catalog> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://pilarr.no/PilarrPPM#/BuildingElementModel> <http://www.w3.org/2002/07/owl#disjointWith> <http://pilarr.no/PilarrPPM#/HouseModel> .
+<http://pilarr.no/PilarrPPM#/BuildingElementModel> <http://www.w3.org/2002/07/owl#disjointWith> <http://pilarr.no/PilarrPPM#/JobCardSpecification> .
+<http://pilarr.no/PilarrPPM#/BuildingElementModel> <http://www.w3.org/2002/07/owl#disjointWith> <http://pilarr.no/PilarrPPM#/MaterialListSpecification> .
+<http://pilarr.no/PilarrPPM#/BuildingElementModel> <http://www.w3.org/2002/07/owl#disjointWith> <http://pilarr.no/PilarrPPM#/WorkPackageSpecification> .
+<http://pilarr.no/PilarrPPM#/BuildingElementModel> <http://www.w3.org/2000/01/rdf-schema#comment> "Pilarr Building Element Model is a catalog of a specific design of certain building element product type. It refers to a particular set of design features, configurations, and properties that each Building Element instance inherits from it."@en .
+# 
+# http://pilarr.no/PilarrPPM#/BuildingElementSpecificationEntry
+<http://pilarr.no/PilarrPPM#/BuildingElementSpecificationEntry> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://pilarr.no/PilarrPPM#/BuildingElementSpecificationEntry> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/digitalconstruction/0.5/Information#CatalogEntry> .
+<https://w3id.org/digitalconstruction/0.5/Information#CatalogEntry> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://pilarr.no/PilarrPPM#/Crew
+<http://pilarr.no/PilarrPPM#/Crew> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://pilarr.no/PilarrPPM#/Crew> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/digitalconstruction/0.5/Agents#Agent> .
+<https://w3id.org/digitalconstruction/0.5/Agents#Agent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://pilarr.no/PilarrPPM#/Crew> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/digitalconstruction/0.5/Agents#Team> .
+<https://w3id.org/digitalconstruction/0.5/Agents#Team> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://pilarr.no/PilarrPPM#/Crew> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid1 .
+_:genid1 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://pilarr.no/PilarrPPM#/CrewSize> .
+_:genid1 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/digitalconstruction/0.5/Variables#hasProperty> .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://pilarr.no/PilarrPPM#/Crew> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid2 .
+_:genid2 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://pilarr.no/PilarrPPM#/Worker> .
+_:genid2 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/digitalconstruction/0.5/Entities#hasMember> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://pilarr.no/PilarrPPM#/Crew> <http://www.w3.org/2000/01/rdf-schema#comment> "A set of workers working together for specific trades."@en .
+# 
+# http://pilarr.no/PilarrPPM#/CrewSize
+<http://pilarr.no/PilarrPPM#/CrewSize> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://pilarr.no/PilarrPPM#/CrewSize> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/digitalconstruction/0.5/Variables#QuantitativeProperty> .
+<https://w3id.org/digitalconstruction/0.5/Variables#QuantitativeProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://pilarr.no/PilarrPPM#/ElementQuantity
+<http://pilarr.no/PilarrPPM#/ElementQuantity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://pilarr.no/PilarrPPM#/ElementQuantity> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/digitalconstruction/0.5/Variables#QuantitativeProperty> .
+# 
+# http://pilarr.no/PilarrPPM#/HouseModel
+<http://pilarr.no/PilarrPPM#/HouseModel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://pilarr.no/PilarrPPM#/HouseModel> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/digitalconstruction/0.5/Information#Catalog> .
+<http://pilarr.no/PilarrPPM#/HouseModel> <http://www.w3.org/2002/07/owl#disjointWith> <http://pilarr.no/PilarrPPM#/JobCardSpecification> .
+<http://pilarr.no/PilarrPPM#/HouseModel> <http://www.w3.org/2002/07/owl#disjointWith> <http://pilarr.no/PilarrPPM#/MaterialListSpecification> .
+<http://pilarr.no/PilarrPPM#/HouseModel> <http://www.w3.org/2002/07/owl#disjointWith> <http://pilarr.no/PilarrPPM#/WorkPackageSpecification> .
+<http://pilarr.no/PilarrPPM#/HouseModel> <http://www.w3.org/2000/01/rdf-schema#comment> "Pilarr House Model is a standard representation of  a type building product (design), which is a catalog of Pilarr Building with same set of design features, configurations, and properties."@en .
+# 
+# http://pilarr.no/PilarrPPM#/HouseModelSpecificationEntry
+<http://pilarr.no/PilarrPPM#/HouseModelSpecificationEntry> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://pilarr.no/PilarrPPM#/HouseModelSpecificationEntry> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/digitalconstruction/0.5/Information#CatalogEntry> .
+# 
+# http://pilarr.no/PilarrPPM#/Inventory
+<http://pilarr.no/PilarrPPM#/Inventory> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://pilarr.no/PilarrPPM#/Inventory> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/digitalconstruction/0.5/Entities#Group> .
+<https://w3id.org/digitalconstruction/0.5/Entities#Group> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://pilarr.no/PilarrPPM#/Inventory> <http://www.w3.org/2000/01/rdf-schema#comment> "Refers to the stock of construction  materials" .
+# 
+# http://pilarr.no/PilarrPPM#/JobCard
+<http://pilarr.no/PilarrPPM#/JobCard> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://pilarr.no/PilarrPPM#/JobCard> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/digitalconstruction/0.5/Processes#Activity> .
+<https://w3id.org/digitalconstruction/0.5/Processes#Activity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://pilarr.no/PilarrPPM#/JobCard> <http://www.w3.org/2000/01/rdf-schema#comment> "A job card is a subset work of a work package that can be completed by a specific trade within a designated physical zone on the construction site. The maximum duration for the job card is one day. "@en .
+# 
+# http://pilarr.no/PilarrPPM#/JobCardSpecification
+<http://pilarr.no/PilarrPPM#/JobCardSpecification> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://pilarr.no/PilarrPPM#/JobCardSpecification> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/digitalconstruction/0.5/Information#Catalog> .
+<http://pilarr.no/PilarrPPM#/JobCardSpecification> <http://www.w3.org/2002/07/owl#disjointWith> <http://pilarr.no/PilarrPPM#/MaterialListSpecification> .
+<http://pilarr.no/PilarrPPM#/JobCardSpecification> <http://www.w3.org/2002/07/owl#disjointWith> <http://pilarr.no/PilarrPPM#/WorkPackageSpecification> .
+<http://pilarr.no/PilarrPPM#/JobCardSpecification> <http://www.w3.org/2000/01/rdf-schema#comment> "A template job card contains the default knowledge and information to set a specific job card, including material list, corresponding building element model, default work rate" .
+# 
+# http://pilarr.no/PilarrPPM#/JobCardSpecificationEntry
+<http://pilarr.no/PilarrPPM#/JobCardSpecificationEntry> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://pilarr.no/PilarrPPM#/JobCardSpecificationEntry> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/digitalconstruction/0.5/Information#CatalogEntry> .
+# 
+# http://pilarr.no/PilarrPPM#/LogisticsProcess
+<http://pilarr.no/PilarrPPM#/LogisticsProcess> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://pilarr.no/PilarrPPM#/LogisticsProcess> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/digitalconstruction/0.5/Processes#Activity> .
+<http://pilarr.no/PilarrPPM#/LogisticsProcess> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid3 .
+_:genid3 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/digitalconstruction/0.5/Processes#Shipment> .
+_:genid3 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/digitalconstruction/0.5/Processes#hasObject> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://pilarr.no/PilarrPPM#/LogisticsProcess> <http://www.w3.org/2000/01/rdf-schema#comment> "Refers to the process of transporting goods or materials from one location to another." .
+# 
+# http://pilarr.no/PilarrPPM#/MaterialListSpecification
+<http://pilarr.no/PilarrPPM#/MaterialListSpecification> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://pilarr.no/PilarrPPM#/MaterialListSpecification> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/digitalconstruction/0.5/Information#Catalog> .
+<http://pilarr.no/PilarrPPM#/MaterialListSpecification> <http://www.w3.org/2002/07/owl#disjointWith> <http://pilarr.no/PilarrPPM#/WorkPackageSpecification> .
+<http://pilarr.no/PilarrPPM#/MaterialListSpecification> <http://www.w3.org/2000/01/rdf-schema#comment> "A template material list is a catalog of required material for corresponding template job card, which contains the default information of consitituted TemplateMaterialSet" .
+# 
+# http://pilarr.no/PilarrPPM#/MaterialListSpecificationEntry
+<http://pilarr.no/PilarrPPM#/MaterialListSpecificationEntry> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://pilarr.no/PilarrPPM#/MaterialListSpecificationEntry> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/digitalconstruction/0.5/Information#CatalogEntry> .
+# 
+# http://pilarr.no/PilarrPPM#/MaterialQuantity
+<http://pilarr.no/PilarrPPM#/MaterialQuantity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://pilarr.no/PilarrPPM#/MaterialQuantity> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/digitalconstruction/0.5/Variables#QuantitativeProperty> .
+# 
+# http://pilarr.no/PilarrPPM#/MaterialSetSpecification
+<http://pilarr.no/PilarrPPM#/MaterialSetSpecification> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://pilarr.no/PilarrPPM#/MaterialSetSpecification> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/digitalconstruction/0.5/Information#Catalog> .
+<http://pilarr.no/PilarrPPM#/MaterialSetSpecification> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid4 .
+_:genid4 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/digitalconstruction/0.5/Materials#Material> .
+<https://w3id.org/digitalconstruction/0.5/Materials#Material> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid4 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/digitalconstruction/0.5/Materials#hasMaterial> .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://pilarr.no/PilarrPPM#/MaterialSetSpecification> <http://www.w3.org/2000/01/rdf-schema#comment> "A template material set is a catalog to describe the material requirement contents, including material type and quantity." .
+# 
+# http://pilarr.no/PilarrPPM#/MaterialSetSpecificationEntry
+<http://pilarr.no/PilarrPPM#/MaterialSetSpecificationEntry> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://pilarr.no/PilarrPPM#/MaterialSetSpecificationEntry> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/digitalconstruction/0.5/Information#CatalogEntry> .
+# 
+# http://pilarr.no/PilarrPPM#/ProductionRate
+<http://pilarr.no/PilarrPPM#/ProductionRate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://pilarr.no/PilarrPPM#/ProductionRate> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/digitalconstruction/0.5/Processes#ProductionRate> .
+<https://w3id.org/digitalconstruction/0.5/Processes#ProductionRate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://pilarr.no/PilarrPPM#/QuantityOfWork
+<http://pilarr.no/PilarrPPM#/QuantityOfWork> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://pilarr.no/PilarrPPM#/QuantityOfWork> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/digitalconstruction/0.5/Variables#QuantitativeProperty> .
+# 
+# http://pilarr.no/PilarrPPM#/ReportedContext
+<http://pilarr.no/PilarrPPM#/ReportedContext> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://pilarr.no/PilarrPPM#/ReportedContext> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/digitalconstruction/0.5/Contexts#Context> .
+<http://pilarr.no/PilarrPPM#/ReportedContext> <http://www.w3.org/2002/07/owl#disjointWith> <http://pilarr.no/PilarrPPM#/SpecificationContext> .
+<http://pilarr.no/PilarrPPM#/ReportedContext> <http://www.w3.org/2000/01/rdf-schema#comment> "A realm of data that representing the reported information of construction execution." .
+# 
+# http://pilarr.no/PilarrPPM#/Schedule
+<http://pilarr.no/PilarrPPM#/Schedule> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://pilarr.no/PilarrPPM#/Schedule> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/digitalconstruction/0.5/Information#Plan> .
+<https://w3id.org/digitalconstruction/0.5/Information#Plan> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://pilarr.no/PilarrPPM#/Schedule> <http://www.w3.org/2000/01/rdf-schema#comment> "A schedule is a detailed plan that outlines the timeline, sequence, and duration of activities required to complete a construction project." .
+# 
+# http://pilarr.no/PilarrPPM#/SpatialPositionState
+<http://pilarr.no/PilarrPPM#/SpatialPositionState> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://pilarr.no/PilarrPPM#/SpatialPositionState> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/digitalconstruction/0.5/Variables#PropertyState> .
+<https://w3id.org/digitalconstruction/0.5/Variables#PropertyState> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://pilarr.no/PilarrPPM#/SpecificationContext
+<http://pilarr.no/PilarrPPM#/SpecificationContext> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://pilarr.no/PilarrPPM#/SpecificationContext> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/digitalconstruction/0.5/Contexts#Context> .
+<http://pilarr.no/PilarrPPM#/SpecificationContext> <http://www.w3.org/2000/01/rdf-schema#comment> "A realm of data that representing the default and empirical information and domain knowledge. For example the properties in TWP, TJC, HM, such as the production rate of different job card." .
+# 
+# http://pilarr.no/PilarrPPM#/Trade
+<http://pilarr.no/PilarrPPM#/Trade> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://pilarr.no/PilarrPPM#/Trade> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/digitalconstruction/0.5/Entities#Category> .
+<https://w3id.org/digitalconstruction/0.5/Entities#Category> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://pilarr.no/PilarrPPM#/Trade> <http://www.w3.org/2000/01/rdf-schema#comment> "Refers to a specialized occupation or craft that is involved in the construction process. Each trade focuses on a specific area of expertise." .
+# 
+# http://pilarr.no/PilarrPPM#/WorkPackage
+<http://pilarr.no/PilarrPPM#/WorkPackage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://pilarr.no/PilarrPPM#/WorkPackage> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/digitalconstruction/0.5/Processes#Activity> .
+<http://pilarr.no/PilarrPPM#/WorkPackage> <http://www.w3.org/2000/01/rdf-schema#comment> "A work package is a clearly defined scope of work that can be completed by a specific trade within a designated physical zone on the construction site. The maximum duration for the work package is one week. "@en .
+# 
+# http://pilarr.no/PilarrPPM#/WorkPackageSpecification
+<http://pilarr.no/PilarrPPM#/WorkPackageSpecification> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://pilarr.no/PilarrPPM#/WorkPackageSpecification> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/digitalconstruction/0.5/Information#Catalog> .
+<http://pilarr.no/PilarrPPM#/WorkPackageSpecification> <http://www.w3.org/2000/01/rdf-schema#comment> "A template work package is a catalog contains information and knowledge for setting WPs.  A template work package contains a set of template job card with detailed settings" .
+# 
+# http://pilarr.no/PilarrPPM#/WorkPackageSpecificationEntry
+<http://pilarr.no/PilarrPPM#/WorkPackageSpecificationEntry> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://pilarr.no/PilarrPPM#/WorkPackageSpecificationEntry> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/digitalconstruction/0.5/Information#CatalogEntry> .
+# 
+# http://pilarr.no/PilarrPPM#/Worker
+<http://pilarr.no/PilarrPPM#/Worker> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://pilarr.no/PilarrPPM#/Worker> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/digitalconstruction/0.5/Agents#Person> .
+<https://w3id.org/digitalconstruction/0.5/Agents#Person> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://pilarr.no/PilarrPPM#/Worker> <http://www.w3.org/2000/01/rdf-schema#comment> "A specific person to affiliate to  a crew  to execute the construction process" .
+# 
+# http://pilarr.no/PilarrPPM#/Zone
+<http://pilarr.no/PilarrPPM#/Zone> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://pilarr.no/PilarrPPM#/Zone> <http://www.w3.org/2002/07/owl#equivalentClass> <https://w3id.org/digitalconstruction/0.5/Entities#Location> .
+<https://w3id.org/digitalconstruction/0.5/Entities#Location> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://pilarr.no/PilarrPPM#/Zone> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/digitalconstruction/0.5/Entities#Location> .
+# 
+# https://w3id.org/bot#Storey
+<https://w3id.org/bot#Storey> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://pilarr.no/PilarrPPM#/Zone> .
+# 
+# https://w3id.org/bot#Zone
+<https://w3id.org/bot#Zone> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/bot#Zone> <http://www.w3.org/2002/07/owl#equivalentClass> <https://w3id.org/digitalconstruction/0.5/Entities#Location> .
+# 
+# https://w3id.org/digitalconstruction/0.5/Agents#Agent
+# 
+# https://w3id.org/digitalconstruction/0.5/Agents#Person
+# 
+# https://w3id.org/digitalconstruction/0.5/Agents#Team
+# 
+# https://w3id.org/digitalconstruction/0.5/Contexts#Context
+# 
+# https://w3id.org/digitalconstruction/0.5/Entities#Building
+# 
+# https://w3id.org/digitalconstruction/0.5/Entities#BuildingObject
+# 
+# https://w3id.org/digitalconstruction/0.5/Entities#Category
+# 
+# https://w3id.org/digitalconstruction/0.5/Entities#Group
+# 
+# https://w3id.org/digitalconstruction/0.5/Entities#Location
+# 
+# https://w3id.org/digitalconstruction/0.5/Information#Catalog
+# 
+# https://w3id.org/digitalconstruction/0.5/Information#CatalogEntry
+# 
+# https://w3id.org/digitalconstruction/0.5/Information#Plan
+# 
+# https://w3id.org/digitalconstruction/0.5/Materials#Material
+# 
+# https://w3id.org/digitalconstruction/0.5/Materials#MaterialBatch
+# 
+# https://w3id.org/digitalconstruction/0.5/Processes#Activity
+# 
+# https://w3id.org/digitalconstruction/0.5/Processes#ProductionRate
+# 
+# https://w3id.org/digitalconstruction/0.5/Processes#Shipment
+# 
+# https://w3id.org/digitalconstruction/0.5/Variables#PropertyState
+# 
+# https://w3id.org/digitalconstruction/0.5/Variables#QuantitativeProperty
+# 
+# 
+# 
+# #################################################################
+# #
+# #    General axioms
+# #
+# #################################################################
+# 
+# 
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
+_:genid5 <http://www.w3.org/2002/07/owl#members> _:genid11 .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid10 .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid9 .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid8 .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid7 .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid6 .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://pilarr.no/PilarrPPM#/WorkPackageSpecificationEntry> .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://pilarr.no/PilarrPPM#/MaterialSetSpecificationEntry> .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://pilarr.no/PilarrPPM#/MaterialListSpecificationEntry> .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://pilarr.no/PilarrPPM#/JobCardSpecificationEntry> .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://pilarr.no/PilarrPPM#/HouseModelSpecificationEntry> .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://pilarr.no/PilarrPPM#/BuildingElementSpecificationEntry> .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+# 
+# Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

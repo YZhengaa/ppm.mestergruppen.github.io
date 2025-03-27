@@ -1,0 +1,735 @@
+[ {
+  "@id" : "_:genid1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/digitalconstruction/0.5/Variables#hasProperty"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://pilarr.no/PilarrPPM#/CrewSize"
+  } ]
+}, {
+  "@id" : "_:genid2",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "http://pilarr.no/PilarrPPM#/Worker"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/digitalconstruction/0.5/Entities#hasMember"
+  } ]
+}, {
+  "@id" : "_:genid3",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "https://w3id.org/digitalconstruction/0.5/Processes#Shipment"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/digitalconstruction/0.5/Processes#hasObject"
+  } ]
+}, {
+  "@id" : "_:genid4",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/digitalconstruction/0.5/Materials#hasMaterial"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "https://w3id.org/digitalconstruction/0.5/Materials#Material"
+  } ]
+}, {
+  "@id" : "_:genid5",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AllDisjointClasses" ],
+  "http://www.w3.org/2002/07/owl#members" : [ {
+    "@list" : [ {
+      "@id" : "http://pilarr.no/PilarrPPM#/BuildingElementSpecificationEntry"
+    }, {
+      "@id" : "http://pilarr.no/PilarrPPM#/HouseModelSpecificationEntry"
+    }, {
+      "@id" : "http://pilarr.no/PilarrPPM#/JobCardSpecificationEntry"
+    }, {
+      "@id" : "http://pilarr.no/PilarrPPM#/MaterialListSpecificationEntry"
+    }, {
+      "@id" : "http://pilarr.no/PilarrPPM#/MaterialSetSpecificationEntry"
+    }, {
+      "@id" : "http://pilarr.no/PilarrPPM#/WorkPackageSpecificationEntry"
+    } ]
+  } ]
+}, {
+  "@id" : "http://pilarr.no/PilarrPPM#",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Copyright by Mester Gruppen AS"
+  }, {
+    "@value" : "PilarrPPM is an application-level ontology focusing on:\n1.describing the organizational knowledge (Work package template) \n2.providing a data schema for Pilarr semantic database (data lake) that represents and links different source of information (e.g. BIM quantity information) \n3.represent multi-contextual information\n4.provide vocabulary for developing rules and queries for generating/retrieving the information for Job cards to support the LPS deployment in the housing model construction."
+  } ],
+  "http://www.w3.org/2002/07/owl#imports" : [ {
+    "@id" : "file:/Users/yuanzheng/Downloads/JBS_WPS%20copy.ttl"
+  }, {
+    "@id" : "https://w3id.org/bot-0.3.2"
+  }, {
+    "@id" : "https://w3id.org/digitalconstruction/0.5/Information"
+  }, {
+    "@id" : "https://w3id.org/digitalconstruction/0.5/Materials"
+  }, {
+    "@id" : "https://w3id.org/digitalconstruction/0.5/Processes"
+  }, {
+    "@id" : "https://w3id.org/digitalconstruction/0.5/Variables"
+  } ],
+  "http://www.w3.org/2002/07/owl#versionIRI" : [ {
+    "@id" : "http://pilarr.no/PilarrPPM/0.1/"
+  } ],
+  "http://www.w3.org/2002/07/owl#versionInfo" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "0.03"
+  } ]
+}, {
+  "@id" : "http://pilarr.no/PilarrPPM#/ActualContext",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/digitalconstruction/0.5/Contexts#Context"
+  } ],
+  "http://www.w3.org/2002/07/owl#disjointWith" : [ {
+    "@id" : "http://pilarr.no/PilarrPPM#/AsPlannedContext"
+  }, {
+    "@id" : "http://pilarr.no/PilarrPPM#/ReportedContext"
+  }, {
+    "@id" : "http://pilarr.no/PilarrPPM#/SpecificationContext"
+  } ]
+}, {
+  "@id" : "http://pilarr.no/PilarrPPM#/Apartment",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://pilarr.no/PilarrPPM#/Zone"
+  } ],
+  "http://www.w3.org/2002/07/owl#disjointWith" : [ {
+    "@id" : "https://w3id.org/bot#Storey"
+  } ]
+}, {
+  "@id" : "http://pilarr.no/PilarrPPM#/AsPlannedContext",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A realm of data that representing the as planned circumstances from schedule and plan."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/digitalconstruction/0.5/Contexts#Context"
+  } ],
+  "http://www.w3.org/2002/07/owl#disjointWith" : [ {
+    "@id" : "http://pilarr.no/PilarrPPM#/ReportedContext"
+  }, {
+    "@id" : "http://pilarr.no/PilarrPPM#/SpecificationContext"
+  } ]
+}, {
+  "@id" : "http://pilarr.no/PilarrPPM#/Building",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/digitalconstruction/0.5/Entities#Building"
+  } ]
+}, {
+  "@id" : "http://pilarr.no/PilarrPPM#/BuildingElement",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A physical element that forms a part of an existing or designed building."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/digitalconstruction/0.5/Entities#BuildingObject"
+  } ]
+}, {
+  "@id" : "http://pilarr.no/PilarrPPM#/BuildingElementModel",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Pilarr Building Element Model is a catalog of a specific design of certain building element product type. It refers to a particular set of design features, configurations, and properties that each Building Element instance inherits from it."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/digitalconstruction/0.5/Information#Catalog"
+  } ],
+  "http://www.w3.org/2002/07/owl#disjointWith" : [ {
+    "@id" : "http://pilarr.no/PilarrPPM#/HouseModel"
+  }, {
+    "@id" : "http://pilarr.no/PilarrPPM#/JobCardSpecification"
+  }, {
+    "@id" : "http://pilarr.no/PilarrPPM#/MaterialListSpecification"
+  }, {
+    "@id" : "http://pilarr.no/PilarrPPM#/WorkPackageSpecification"
+  } ]
+}, {
+  "@id" : "http://pilarr.no/PilarrPPM#/BuildingElementSpecificationEntry",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/digitalconstruction/0.5/Information#CatalogEntry"
+  } ]
+}, {
+  "@id" : "http://pilarr.no/PilarrPPM#/Crew",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A set of workers working together for specific trades."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/digitalconstruction/0.5/Agents#Agent"
+  }, {
+    "@id" : "https://w3id.org/digitalconstruction/0.5/Agents#Team"
+  }, {
+    "@id" : "_:genid1"
+  }, {
+    "@id" : "_:genid2"
+  } ]
+}, {
+  "@id" : "http://pilarr.no/PilarrPPM#/CrewSize",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/digitalconstruction/0.5/Variables#QuantitativeProperty"
+  } ]
+}, {
+  "@id" : "http://pilarr.no/PilarrPPM#/ElementQuantity",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/digitalconstruction/0.5/Variables#QuantitativeProperty"
+  } ]
+}, {
+  "@id" : "http://pilarr.no/PilarrPPM#/HouseModel",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Pilarr House Model is a standard representation of  a type building product (design), which is a catalog of Pilarr Building with same set of design features, configurations, and properties."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/digitalconstruction/0.5/Information#Catalog"
+  } ],
+  "http://www.w3.org/2002/07/owl#disjointWith" : [ {
+    "@id" : "http://pilarr.no/PilarrPPM#/JobCardSpecification"
+  }, {
+    "@id" : "http://pilarr.no/PilarrPPM#/MaterialListSpecification"
+  }, {
+    "@id" : "http://pilarr.no/PilarrPPM#/WorkPackageSpecification"
+  } ]
+}, {
+  "@id" : "http://pilarr.no/PilarrPPM#/HouseModelSpecificationEntry",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/digitalconstruction/0.5/Information#CatalogEntry"
+  } ]
+}, {
+  "@id" : "http://pilarr.no/PilarrPPM#/Inventory",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Refers to the stock of construction  materials"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/digitalconstruction/0.5/Entities#Group"
+  } ]
+}, {
+  "@id" : "http://pilarr.no/PilarrPPM#/JobCard",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A job card is a subset work of a work package that can be completed by a specific trade within a designated physical zone on the construction site. The maximum duration for the job card is one day. "
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/digitalconstruction/0.5/Processes#Activity"
+  } ]
+}, {
+  "@id" : "http://pilarr.no/PilarrPPM#/JobCardSpecification",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A template job card contains the default knowledge and information to set a specific job card, including material list, corresponding building element model, default work rate"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/digitalconstruction/0.5/Information#Catalog"
+  } ],
+  "http://www.w3.org/2002/07/owl#disjointWith" : [ {
+    "@id" : "http://pilarr.no/PilarrPPM#/MaterialListSpecification"
+  }, {
+    "@id" : "http://pilarr.no/PilarrPPM#/WorkPackageSpecification"
+  } ]
+}, {
+  "@id" : "http://pilarr.no/PilarrPPM#/JobCardSpecificationEntry",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/digitalconstruction/0.5/Information#CatalogEntry"
+  } ]
+}, {
+  "@id" : "http://pilarr.no/PilarrPPM#/LogisticsProcess",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Refers to the process of transporting goods or materials from one location to another."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/digitalconstruction/0.5/Processes#Activity"
+  }, {
+    "@id" : "_:genid3"
+  } ]
+}, {
+  "@id" : "http://pilarr.no/PilarrPPM#/MaterialListSpecification",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A template material list is a catalog of required material for corresponding template job card, which contains the default information of consitituted TemplateMaterialSet"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/digitalconstruction/0.5/Information#Catalog"
+  } ],
+  "http://www.w3.org/2002/07/owl#disjointWith" : [ {
+    "@id" : "http://pilarr.no/PilarrPPM#/WorkPackageSpecification"
+  } ]
+}, {
+  "@id" : "http://pilarr.no/PilarrPPM#/MaterialListSpecificationEntry",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/digitalconstruction/0.5/Information#CatalogEntry"
+  } ]
+}, {
+  "@id" : "http://pilarr.no/PilarrPPM#/MaterialQuantity",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/digitalconstruction/0.5/Variables#QuantitativeProperty"
+  } ]
+}, {
+  "@id" : "http://pilarr.no/PilarrPPM#/MaterialSetSpecification",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A template material set is a catalog to describe the material requirement contents, including material type and quantity."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/digitalconstruction/0.5/Information#Catalog"
+  }, {
+    "@id" : "_:genid4"
+  } ]
+}, {
+  "@id" : "http://pilarr.no/PilarrPPM#/MaterialSetSpecificationEntry",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/digitalconstruction/0.5/Information#CatalogEntry"
+  } ]
+}, {
+  "@id" : "http://pilarr.no/PilarrPPM#/ProductionRate",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/digitalconstruction/0.5/Processes#ProductionRate"
+  } ]
+}, {
+  "@id" : "http://pilarr.no/PilarrPPM#/QuantityOfWork",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/digitalconstruction/0.5/Variables#QuantitativeProperty"
+  } ]
+}, {
+  "@id" : "http://pilarr.no/PilarrPPM#/ReportedContext",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A realm of data that representing the reported information of construction execution."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/digitalconstruction/0.5/Contexts#Context"
+  } ],
+  "http://www.w3.org/2002/07/owl#disjointWith" : [ {
+    "@id" : "http://pilarr.no/PilarrPPM#/SpecificationContext"
+  } ]
+}, {
+  "@id" : "http://pilarr.no/PilarrPPM#/Schedule",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A schedule is a detailed plan that outlines the timeline, sequence, and duration of activities required to complete a construction project."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/digitalconstruction/0.5/Information#Plan"
+  } ]
+}, {
+  "@id" : "http://pilarr.no/PilarrPPM#/SpatialPositionState",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/digitalconstruction/0.5/Variables#PropertyState"
+  } ]
+}, {
+  "@id" : "http://pilarr.no/PilarrPPM#/SpecificationContext",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A realm of data that representing the default and empirical information and domain knowledge. For example the properties in TWP, TJC, HM, such as the production rate of different job card."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/digitalconstruction/0.5/Contexts#Context"
+  } ]
+}, {
+  "@id" : "http://pilarr.no/PilarrPPM#/Trade",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Refers to a specialized occupation or craft that is involved in the construction process. Each trade focuses on a specific area of expertise."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/digitalconstruction/0.5/Entities#Category"
+  } ]
+}, {
+  "@id" : "http://pilarr.no/PilarrPPM#/WorkPackage",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A work package is a clearly defined scope of work that can be completed by a specific trade within a designated physical zone on the construction site. The maximum duration for the work package is one week. "
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/digitalconstruction/0.5/Processes#Activity"
+  } ]
+}, {
+  "@id" : "http://pilarr.no/PilarrPPM#/WorkPackageSpecification",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A template work package is a catalog contains information and knowledge for setting WPs.  A template work package contains a set of template job card with detailed settings"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/digitalconstruction/0.5/Information#Catalog"
+  } ]
+}, {
+  "@id" : "http://pilarr.no/PilarrPPM#/WorkPackageSpecificationEntry",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/digitalconstruction/0.5/Information#CatalogEntry"
+  } ]
+}, {
+  "@id" : "http://pilarr.no/PilarrPPM#/Worker",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A specific person to affiliate to  a crew  to execute the construction process"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/digitalconstruction/0.5/Agents#Person"
+  } ]
+}, {
+  "@id" : "http://pilarr.no/PilarrPPM#/Zone",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/digitalconstruction/0.5/Entities#Location"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "https://w3id.org/digitalconstruction/0.5/Entities#Location"
+  } ]
+}, {
+  "@id" : "http://pilarr.no/PilarrPPM#/contains",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://pilarr.no/PilarrPPM#/Zone"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://pilarr.no/PilarrPPM#/Zone"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#topObjectProperty"
+  } ]
+}, {
+  "@id" : "http://pilarr.no/PilarrPPM#/containsJobCard",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/digitalconstruction/0.5/Processes#hasSubActivity"
+  } ]
+}, {
+  "@id" : "http://pilarr.no/PilarrPPM#/hasCrew",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://pilarr.no/PilarrPPM#/JobCard"
+  }, {
+    "@id" : "http://pilarr.no/PilarrPPM#/WorkPackage"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://pilarr.no/PilarrPPM#/Crew"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/digitalconstruction/0.5/Agents#hasExecutingAgent"
+  } ]
+}, {
+  "@id" : "http://pilarr.no/PilarrPPM#/hasDestinationLocation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://pilarr.no/PilarrPPM#/LogisticsProcess"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://pilarr.no/PilarrPPM#/Zone"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/digitalconstruction/0.5/Processes#hasFinalLocation"
+  } ]
+}, {
+  "@id" : "http://pilarr.no/PilarrPPM#/hasElementQuantity",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://pilarr.no/PilarrPPM#/BuildingElement"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://pilarr.no/PilarrPPM#/ElementQuantity"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/digitalconstruction/0.5/Variables#hasProperty"
+  } ]
+}, {
+  "@id" : "http://pilarr.no/PilarrPPM#/hasHouseModelSpecification",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://pilarr.no/PilarrPPM#/Building"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://pilarr.no/PilarrPPM#/HouseModel"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/digitalconstruction/0.5/Information#isTopicOf"
+  } ]
+}, {
+  "@id" : "http://pilarr.no/PilarrPPM#/hasJobCardSpecification",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://pilarr.no/PilarrPPM#/JobCard"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://pilarr.no/PilarrPPM#/JobCardSpecification"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/digitalconstruction/0.5/Information#isTopicOf"
+  } ]
+}, {
+  "@id" : "http://pilarr.no/PilarrPPM#/hasMaterialQuantity",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/digitalconstruction/0.5/Materials#MaterialBatch"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://pilarr.no/PilarrPPM#/MaterialQuantity"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/digitalconstruction/0.5/Variables#hasProperty"
+  } ]
+}, {
+  "@id" : "http://pilarr.no/PilarrPPM#/hasMaterialSetSpecification",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/digitalconstruction/0.5/Materials#MaterialBatch"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://pilarr.no/PilarrPPM#/MaterialSetSpecification"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/digitalconstruction/0.5/Information#isTopicOf"
+  } ]
+}, {
+  "@id" : "http://pilarr.no/PilarrPPM#/hasOriginLocation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://pilarr.no/PilarrPPM#/LogisticsProcess"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://pilarr.no/PilarrPPM#/Zone"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/digitalconstruction/0.5/Processes#hasInitialLocation"
+  } ]
+}, {
+  "@id" : "http://pilarr.no/PilarrPPM#/hasRelatedBuilding",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://pilarr.no/PilarrPPM#/JobCard"
+  }, {
+    "@id" : "http://pilarr.no/PilarrPPM#/WorkPackage"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://pilarr.no/PilarrPPM#/Building"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#topObjectProperty"
+  } ]
+}, {
+  "@id" : "http://pilarr.no/PilarrPPM#/hasRelatedBuildingElement",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://pilarr.no/PilarrPPM#/JobCard"
+  }, {
+    "@id" : "http://pilarr.no/PilarrPPM#/WorkPackage"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://pilarr.no/PilarrPPM#/BuildingElement"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#topObjectProperty"
+  } ]
+}, {
+  "@id" : "http://pilarr.no/PilarrPPM#/hasShippingMaterialBatch",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/digitalconstruction/0.5/Processes#Shipment"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/digitalconstruction/0.5/Materials#MaterialBatch"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/digitalconstruction/0.5/Entities#hasMember"
+  } ]
+}, {
+  "@id" : "http://pilarr.no/PilarrPPM#/hasStoredMaterialBatch",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://pilarr.no/PilarrPPM#/Inventory"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/digitalconstruction/0.5/Materials#MaterialBatch"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/digitalconstruction/0.5/Entities#hasMember"
+  } ]
+}, {
+  "@id" : "http://pilarr.no/PilarrPPM#/hasTrade",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/digitalconstruction/0.5/Variables#hasProperty"
+  } ]
+}, {
+  "@id" : "http://pilarr.no/PilarrPPM#/hasWorkPackageSpecification",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://pilarr.no/PilarrPPM#/WorkPackage"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://pilarr.no/PilarrPPM#/WorkPackageSpecification"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/digitalconstruction/0.5/Information#isTopicOf"
+  } ]
+}, {
+  "@id" : "http://pilarr.no/PilarrPPM#/includesBuildingElementModel",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://pilarr.no/PilarrPPM#/HouseModel"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://pilarr.no/PilarrPPM#/BuildingElementModel"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/digitalconstruction/0.5/Information#includesModel"
+  } ]
+}, {
+  "@id" : "http://pilarr.no/PilarrPPM#/includesJobCardSpecification",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://pilarr.no/PilarrPPM#/WorkPackageSpecification"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://pilarr.no/PilarrPPM#/JobCardSpecification"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/digitalconstruction/0.5/Information#includesModel"
+  } ]
+}, {
+  "@id" : "http://pilarr.no/PilarrPPM#/includesMaterialListSpecification",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://pilarr.no/PilarrPPM#/JobCardSpecification"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://pilarr.no/PilarrPPM#/MaterialListSpecification"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/digitalconstruction/0.5/Information#includesModel"
+  } ]
+}, {
+  "@id" : "http://pilarr.no/PilarrPPM#/includesMaterialSetSpecification",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://pilarr.no/PilarrPPM#/MaterialListSpecification"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://pilarr.no/PilarrPPM#/MaterialSetSpecification"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/digitalconstruction/0.5/Information#includesModel"
+  } ]
+}, {
+  "@id" : "https://w3id.org/bot#Storey",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://pilarr.no/PilarrPPM#/Zone"
+  } ]
+}, {
+  "@id" : "https://w3id.org/bot#Zone",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "https://w3id.org/digitalconstruction/0.5/Entities#Location"
+  } ]
+}, {
+  "@id" : "https://w3id.org/digitalconstruction/0.5/Agents#Agent",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://w3id.org/digitalconstruction/0.5/Agents#Person",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://w3id.org/digitalconstruction/0.5/Agents#Team",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://w3id.org/digitalconstruction/0.5/Agents#hasExecutingAgent",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
+}, {
+  "@id" : "https://w3id.org/digitalconstruction/0.5/Contexts#Context",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://w3id.org/digitalconstruction/0.5/Entities#Building",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://w3id.org/digitalconstruction/0.5/Entities#BuildingObject",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://w3id.org/digitalconstruction/0.5/Entities#Category",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://w3id.org/digitalconstruction/0.5/Entities#Group",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://w3id.org/digitalconstruction/0.5/Entities#Location",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://w3id.org/digitalconstruction/0.5/Entities#hasMember",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
+}, {
+  "@id" : "https://w3id.org/digitalconstruction/0.5/Information#Catalog",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://w3id.org/digitalconstruction/0.5/Information#CatalogEntry",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://w3id.org/digitalconstruction/0.5/Information#Plan",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://w3id.org/digitalconstruction/0.5/Information#includesModel",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
+}, {
+  "@id" : "https://w3id.org/digitalconstruction/0.5/Information#isTopicOf",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
+}, {
+  "@id" : "https://w3id.org/digitalconstruction/0.5/Materials#Material",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://w3id.org/digitalconstruction/0.5/Materials#MaterialBatch",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://w3id.org/digitalconstruction/0.5/Materials#hasMaterial",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
+}, {
+  "@id" : "https://w3id.org/digitalconstruction/0.5/Processes#Activity",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://w3id.org/digitalconstruction/0.5/Processes#ProductionRate",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://w3id.org/digitalconstruction/0.5/Processes#Shipment",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://w3id.org/digitalconstruction/0.5/Processes#hasFinalLocation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
+}, {
+  "@id" : "https://w3id.org/digitalconstruction/0.5/Processes#hasInitialLocation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
+}, {
+  "@id" : "https://w3id.org/digitalconstruction/0.5/Processes#hasObject",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
+}, {
+  "@id" : "https://w3id.org/digitalconstruction/0.5/Processes#hasSubActivity",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://w3id.org/digitalconstruction/0.5/Variables#PropertyState",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://w3id.org/digitalconstruction/0.5/Variables#QuantitativeProperty",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://w3id.org/digitalconstruction/0.5/Variables#hasProperty",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
+} ]
